@@ -1,0 +1,16 @@
+<button onclick="fnBizRules()">Submit</button>
+<!--test-->
+<p id="bizrules"></p>
+<script>
+  <!-- Call Business Rules -->
+  function fnBizRules() {
+    var displayMsg = "";
+    var j = 0;
+    do {
+      displayMsg += "<br>The lucky number is " +j;
+      j++;
+    }
+    while (j < 36);
+      document.getElementById("bizrules").innerHTML = displayMsg;
+  }
+</script>
