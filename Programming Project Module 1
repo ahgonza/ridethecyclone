@@ -60,12 +60,9 @@ var num = 3;
 console.log(num++);
 console.log(++num);
 
-// For the first statement, it comes out as 3 because the increment happens in order after the console.log.
-// The console would log the value of the variable before the increment. 
-// For the second statement, the console would log 5 because the increment symbol being between the variable
-// and the command increments them both.  
+// For the first statement, the console logs "3" because the operator returns the value before incrementing. 
+// For the second statement, the console would log "5" because the operator returns the value after incrementing.  
 
-// The console will read "3" then "4." In the first 
 
 // 3. Remove the ambiguity from the following line but keep the result
 //    exactly the same.
