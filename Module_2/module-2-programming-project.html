@@ -45,44 +45,65 @@ console.log("Values");
 //1. Take "23" and " Michael Jordan" and concatenate the strings together to create one
 
 var player_number = 23;
-var player = "Michael_Jordan";
+var player = "Michael_Jordan ";
 
-var basketball_message = player.concat("player_number");
-
-console.log(basketball_message);
+var basketball_message = player + player_number;
 
 //2. Create a concatenate string , and with the first input as "Hello" & second input as "Your name", but use a prompt to input your name
 //.  output the concatenate string on the screen
 //.  Example; Hello Michael Jordan
 
+var greeting = "Hello";
+var yourName = prompt("What is your name?");
 
+var yourNameGreeting = greeting + "," + " " + yourName;
+
+console.log(yourNameGreeting);
 //------------------------------------------------ //
 // COMPARISON OPERATORS and CONDITIONAL STATEMENTS //
 //-------------------------------------------------//
 console.log("Comparison Operators");
 // 1. Show how you would validate that xyz equals 45, input the code below xyz value
       xyz = 45;
-
+if(xyz == 45)
+{
+  alert("xyz is equal to 45")
+}
     
 // 2. Create a conditional statement if the value is either < or > (start is greater than end and end is greater that start)
       var start = 500;
       var end = 400;
-
+if(start > end)
+{
+  alert("The number is now smaller")
+}
+if(start < end)
+{
+  alert("The number is now larger")
+}
 // 3. Provide an conditional statement with an else statement. Create an input prompt that inputs a new score
 //.   Score is 45, validate that 45 is greater or equal to the value that was entered in the input prompt, else provide an alternative answer
+var score = prompt("What is the score?"); 
+
+if(score == 45)
+{
+alert("You win!")
+} else {
+  alert("Not quite")
+}
 
   //------------------------------------------------ //
 // ARRAYS //
 //-------------------------------------------------//
 
   //1. Setup an array to hold 5 objects, provide 5 different places that you enjoy traveling to
-  var months = ["January","February","March","April","May"];
+  var places = ["New York","San Francisco","Maryland","New Mexico","Seattle"];
   //2. Output in the Console the array values used in #1
-  console.log(months);
+  console.log(places);
   //3. Use the pop function on the array and output the array list
-  pop(months);
+  places.pop();
   //4. Use the shift function on the array and output the array list
-  shift(months);
+  fruits.shift();
 </script>
 </head>
 <body>
