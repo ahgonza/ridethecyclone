@@ -22,11 +22,19 @@ prompt(variablename);
 
 // 1. Create a string variable that uses a prompt that asks the customer for his/her name
 
+var name = prompt("What is your name, friend?");
+
 // 2. Write the value from #1 in the Console
+
+console.log(name);
 
 // 3. Create a conditional statement that validates if the user has not input a name from #1, provide an alternate message.
 
-
+if(name == "")
+{
+  alert("Please type a name."
+  )
+}
 
 //--------//
 // Concatentate Strings //
@@ -35,6 +43,13 @@ console.log("Values");
 
 
 //1. Take "23" and " Michael Jordan" and concatenate the strings together to create one
+
+var player_number = 23;
+var player = "Michael_Jordan";
+
+var basketball_message = player.concat("player_number");
+
+console.log(basketball_message);
 
 //2. Create a concatenate string , and with the first input as "Hello" & second input as "Your name", but use a prompt to input your name
 //.  output the concatenate string on the screen
@@ -47,6 +62,8 @@ console.log("Values");
 console.log("Comparison Operators");
 // 1. Show how you would validate that xyz equals 45, input the code below xyz value
       xyz = 45;
+
+    
 // 2. Create a conditional statement if the value is either < or > (start is greater than end and end is greater that start)
       var start = 500;
       var end = 400;
@@ -59,13 +76,13 @@ console.log("Comparison Operators");
 //-------------------------------------------------//
 
   //1. Setup an array to hold 5 objects, provide 5 different places that you enjoy traveling to
-  
+  var months = ["January","February","March","April","May"];
   //2. Output in the Console the array values used in #1
-  
+  console.log(months);
   //3. Use the pop function on the array and output the array list
-  
+  pop(months);
   //4. Use the shift function on the array and output the array list
-
+  shift(months);
 </script>
 </head>
 <body>
