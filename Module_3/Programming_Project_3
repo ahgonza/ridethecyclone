@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162: Module 3 Programming Project</title>
+<style>* { font-family: monospace; }</style>
+<script>
+
+//---------//
+// Strings //
+//---------//
+console.log("Strings");
+
+// 1. Make all countries in the following array follow the same formatting:
+//    The first letter should be upper case, the rest lower case. Print the
+//    result to the console.
+
+var countries = ["AustraliA", "greece", "PERU", "ChInA"];
+
+for (var i = 0; i < countries.length; i++) {
+  var currentCountry = countries[i];
+  countries[i] = currentCountry.slice(0, 1,).toUpperCase() + currentCountry.slice(1).toLowerCase();
+}
+
+// 2. Get every second and third letter from each country and concatenate them.
+//    Print the results to the console.
+
+var countries = ["AustraliA", "greece", "PERU", "ChInA"];
+var allCountryLetters = "";
+for (var i = 0; i < countries.length; i++) {
+  var currentCountry = countries[i];
+  allCountryLetters = allCountryLetters + currentCountry.slice(1, 3);
+}
+console.log(allCountryLetters);
+// 3. In the sentence below replace 'dart' with 'arrow' by using the indexOf
+//    and slice functions.
+
+var sentence = "Time flies like an dart; fruit flies like a banana.";
+
+/*var sentence = "Time flies like an dart; fruit flies like a banana.";
+sentenceSlice = sentence.slice(sentence.indexOf("dart"), sentence.indexOf("dart") + "dart".length);
+
+//Hey Jeff, by my understanding, slice does not alter the original string, 
+ so I cannot use that specific function to replace dart with arrow in the original sentence.  
+ Below is what I came up with. */ 
+
+sentence = sentence.replace("dart", "arrow");
+
+
+// 4. Find the index of the last occurrence of flies in sentence.
+
+sentence.lastIndexOf("flies");
+
+// 5. Prompt the user for a string, reverse it, and show the result to the user.
+var userResponse = prompt("Hey type something in, will ya?");
+alert(userResponse.split('').reverse().join(""));
+
+
+//---------//
+// Numbers //
+//---------//
+console.log("Numbers");
+
+// Use the following variable to answer the next questions.
+
+var value = 13.3;
+
+// 1. Round the value using normal math rules.
+
+Math.round(value);
+
+// 2. Round the value up.
+
+Math.ceil(value)
+
+// 3. Round the value down.
+
+Math.floor(value);
+
+// 4. Simulate a coin flip by generating a random number. Assume the coin is
+//    fair and print the result, heads or tails, to the console.
+
+var flip = Math.round(Math.random());
+if (flip === 1) {
+  var flipResult = "heads";
+} else {
+  var flipResult = "tails";
+}
+console.log(flipResult);
+
+//-------//
+// Dates //
+//-------//
+console.log("Dates");
+
+// 1. Prompt the user for their age and proceed to show in what year they
+//    were born (you can assume they already had their birthday in the current
+//    year).
+
+var userAge = prompt("What is your age?");
+var year = new Date().getFullYear()
+var yearOfBirth = "You were born in the year " + (year - userAge);
+alert(yearOfBirth);
+
+// 2. Make a program that does the following: (1) Use a prompt to obtain the
+//    birth year of the user. (2) Use a prompt to obtain the birth month of
+//    the user. (3) Use a prompt to obtain the birth day of the user.
+//    (4) Calculate how old the user is in days. (5) Show the result to
+//    the user.
+
+var userYears = prompt("What year were you born?");
+var userMonth = prompt("What month were you born?");
+var userB_Day = prompt("What numbered day were you born?");
+const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+
+var birthDate = new Date(userYears, userMonth, userB_Day);
+var diffDays = Math.round((new Date() - birthDate) / oneDay);
+
+alert(diffDays);
+</script>
+</head>
+<body>
+  See console!
+</body>
+</html>
