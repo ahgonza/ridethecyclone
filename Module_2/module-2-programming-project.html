@@ -29,7 +29,16 @@ var name = prompt("What is your name, friend?");
 console.log(name);
 
 // 3. Create a conditional statement that validates if the user has not input a name from #1, provide an alternate message.
-
+// This wouldn't work. Because of the following;
+  
+  // prompt("Please type a name."  <-- missing ) and semicolon
+  // should be >> prompt("Please type a name"); } <-- not )
+  // remember { bracket is before and end. Parenthesis( is when you are actioning something.
+  if(name == ""){
+    console.log("name is not found");
+  }
+  //Above is what you should have
+  
 if(name == "")
 {
   prompt("Please type a name."
