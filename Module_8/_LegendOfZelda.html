@@ -1,44 +1,38 @@
 <html>
     <head>
-        <script>
-            var zeldaInfo = {
-    name: "The Legend of Zelda",
-    genre: "Adventure",
-    year: 1986,
-    synopsis: "A young boy named Link must travel to Death Mountain and defeat the pig-like monster, Ganon, to restore peace to the kingdom of Hyrule. A teenage Link embarks on a journey to awaken the sleeping maiden, Zelda, and learn the origin of the Triforce.",
-    creator: "Shigeru Miyamoto",
-    studio: "Nintendo",
-    rating: "9/10",
-    gameNumber: 29,
-    origin: "Japan",
-    copiesSold: 136380000
-};
-
-document.write("<b><font size = 8>");
-document.write("My topic is " + zeldaInfo.name);
-document.write("</b></font size>");
-document.write("<br><font size = 5>");
-document.write("The genre is " + zeldaInfo.genre);
-document.write("<br>"); 
-document.write("The studio that created it is " + zeldaInfo.studio);
-document.write("<br>"); 
-document.write(zeldaInfo.studio + " is based in " + zeldaInfo.origin);
-document.write("<br>");
-document.write("The first game was released in " + zeldaInfo.year); 
-document.write("<br>");
-document.write("Summary: " + zeldaInfo.synopsis);
-document.write("<br>");
-document.write("The game was created by " + zeldaInfo.creator);
-document.write("<br>");
-document.write("IGN rates these games " + zeldaInfo.rating);
-document.write("<br>");
-document.write("This series has " + zeldaInfo.gameNumber + " games");
-document.write("<br>");
-document.write("This game has sold " + zeldaInfo.copiesSold + " units overall");
-
-        </script>
+        
     </head>
     <body>
-        <img src="Module_8/images/zelda.jpg" height="450" width="350">
+        <img src="images/zelda.jpg" height="450" width="350">
+        <script>
+            var zeldaInfo = {
+                name: "The Legend of Zelda",
+                genre: "Adventure",
+                year: 1986,
+                synopsis: "A young boy named Link must travel to Death Mountain and defeat the pig-like monster, Ganon, to restore peace to the kingdom of Hyrule. A teenage Link embarks on a journey to awaken the sleeping maiden, Zelda, and learn the origin of the Triforce.",
+                creator: "Shigeru Miyamoto",
+                studio: "Nintendo",
+                rating: "9/10",
+                gameNumber: 29,
+                origin: "Japan",
+                copiesSold: 136380000
+                };
+                //template literal
+            var zeldaHtml = `
+                <h1> My topic is ${zeldaInfo.name} </h1>
+                <p>The genre is ${zeldaInfo.genre} </p>
+                <p>The studio that created it is ${zeldaInfo.studio} </p>
+                <p>${zeldaInfo.studio} is based in  ${zeldaInfo.origin} </p>
+                <p>The first game was released in ${zeldaInfo.year} </p>
+                <p>Summary: ${zeldaInfo.synopsis}</p>
+                <p> The game was created by ${zeldaInfo.creator}</p>
+                <p> IGN rates this series ${zeldaInfo.rating}</p>
+                <p>This series has ${zeldaInfo.gamenumber} games </p>
+                <p>${zeldaInfo.studio} has sold ${zeldaInfo.copiesSold} units overall</p>
+            `;
+            document.querySelector("body").innerHTML += zeldaHtml;
+
+        </script>
     </body>
+    
 </html>

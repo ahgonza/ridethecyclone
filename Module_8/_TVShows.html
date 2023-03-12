@@ -1,5 +1,7 @@
 <html>
-    <head>
+    <head></head>
+    <body>
+        <img src="images/Doctor_Who_Series_1.jpg" height="450" width="350" >
         <script>
             var tvShow = {
                 name: "Doctor Who",
@@ -13,33 +15,21 @@
                 seasons: 14,
                 origin: "the United Kingdom"
                 };
-                document.write("<b><font size = 8>");
-                document.write("The TV show name is " + tvShow.name);
-                document.write("</b></font size>");
-                document.write("<br><font size = 5>");
-                document.write("The genre is " + tvShow.genre);
-                document.write("<br>"); 
-                document.write("The lead actor is " + tvShow.actor);
-                document.write("<br>"); 
-                document.write("The release year was " + tvShow.year); 
-                document.write("<br>");
-                document.write("The leading actor is " + tvShow.actor);
-                document.write("<br>");
-                document.write("Summary: " + tvShow.synopsis);
-                document.write("<br>");
-                document.write("The show was created by " + tvShow.creator);
-                document.write("<br>");
-                document.write("IMDB rates this show " + tvShow.imdbRating);
-                document.write("<br>");
-                document.write("This show has " + tvShow.episodeNumber + " episodes");
-                document.write("<br>");
-                document.write("This show has " + tvShow.seasons + " seasons");
-                document.write("<br>");
-                document.write("This show is filmed in " + tvShow.origin);
-        </script>
-    </head>
-    <body>
-        <img src="Module_8/images/Doctor_Who_Series_1.jpg" height="450" width="350" >
 
+            var whoHtml = `
+                <h1>The TV show name is ${tvShow.name}</h1>
+                <p>The genre is ${tvShow.genre}</p>
+                <p>The lead actor is ${tvShow.actor}</p>
+                <p>The release year was ${tvShow.year}</p>
+                <p>The leading actor is ${tvShow.actor}</p>
+                <p>Summary: ${tvShow.synopsis}</p>
+                <p>The show was created by ${tvShow.creator}</p>
+                <p>IMDB rates this show ${tvShow.imdbRating}</p>
+                <p>This show has ${tvShow.episodeNumber} episodes</p>
+                <p>This show has ${tvShow.seasons} seasons</p>
+                <p>This show is filmed in ${tvShow.origin}</p>
+                `;
+            document.querySelector("body").innerHTML += whoHtml; 
+        </script>
     </body>
 </html>
