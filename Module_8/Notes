@@ -1,8 +1,26 @@
+Create an object with TV Shows that lists a minimum of 10 properties and values assigned to these properties
+
+Display a story about that TV Show via using JavaScript like we did for "Movie" in the Lab and display on the screen. Figure out how to place the image in the appropriate spot with Javascript
+
+Save HTML page for this as: _TVShows.html
+
+====PART II =======
+
 Create an object with the topic that you want that lists a minimum of 10 properties and values assigned to these properties.
-Display a story about your topic via using JavaScript like we did for "Atheletes" in the Lab and display on the screen. 
-Figure out how to place the image in the appropriate spot with Javascript
+
+Display a story about your topic via using JavaScript like we did for "Atheletes" in the Lab and display on the screen. Figure out how to place the image in the appropriate spot with Javascript
+
 Save the file as: _YourTopic.html
+
 ====Part III ====
+
 Push this code to your GitHub Site
+
 On Monday, March 13, 2023 You will present your page via the website URL to the class, IF YOU DO NOT HAVE this completed, a Screenshot will not suffice, and will be a lost of points if this can't be fully presented.
+
 Please Record a 2-3 minute YouTube video and post the URL here. This is an individual assignment
+
+ QUESTIONS:
+
+ How can I place the image before the text and after the title? 
+ 
