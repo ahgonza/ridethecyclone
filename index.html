@@ -1,0 +1,50 @@
+<html>
+    <title>Sample1</title>
+    <head>
+        <script src="form.js"></script>
+        <style>
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+        <h1>Enter your info!</h1>
+        <!---
+        <form name="myForm" class="myForm" action="/action.js" onSubmit="return checkForm()" method="post"> -->
+        <form>
+            First Name: <input type="text" id="fName" name="fname">
+            Last Name: <input type="text" id="lName" name="lname">
+           
+            <h2>Address</h2>
+            Address Line 1: <input type="text" id="addressInput" name="addy1" onClick="checkField()" onInput="checkField()">
+            <br>
+            Address Line 2: <input type="text" name="addy2" onClick="checkField()">
+            <br>
+            City: <input type="text" id="cityName" name="city">
+            <br>
+            State: <input type="text" id="stateName" name="state">
+            <br>
+            Zip Code: <input type="number" id="zip" name="zip">
+            
+            <h2>Personal Info</h2>
+            What is your favorite coffee place in Pittsburgh?
+            <input type="text" id="coffeePlace" name="coffeePlace" style="width: 300px;">
+            <br>
+            What is your favorite lunch spot in Pittsburgh?
+            <input type="text" id="lunchSpot" name="lunchSpot" style="width: 300px;">
+            <br>
+            What is your favorite city to visit outside of Pittsburgh?
+            <input type="text" id="vacationName" name="vacationName" style="width: 300px">
+            <br>
+            <button type="submit" onClick="checkForm()"> Submit!</button>
+    
+
+        </Form>
+        </div>
+    </body>
+</html>

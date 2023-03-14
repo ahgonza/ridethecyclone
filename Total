@@ -1,0 +1,83 @@
+<html>
+    <title>Sample1</title>
+    <head>
+        <script>
+            function checkField() {
+    if (document.getElementById("addressInput").value === "") {
+        document.getElementById("addressInput").style.backgroundColor = "#FFC0CB";
+       } else {
+        (document.getElementById("addressInput")).style.backgroundColor = "transparent";
+       } 
+}
+function validateForm() {
+    if (checkForm() === false) {
+        alert("Please fill in all fields!")
+    } else {
+
+    }
+}
+function checkForm() {
+    var allFields =[ 
+        document.getElementById("fName").value,
+        document.getElementById("lName").value,
+        document.getElementById("addressInput").value,
+        document.getElementById("cityName").value,
+        document.getElementById("stateName").value,
+        document.getElementById("zip").value,
+        document.getElementById("coffeePlace").value,
+        document.getElementById("lunchSpot").value,
+        document.getElementById("vacationName").value
+    ];
+    for (var i = 0; i < allFields.length; i++) {
+        if (allFields[i].length === 0) {
+          return false;
+        }
+      }
+      return true;
+      validateForm();
+    }
+
+        </script>
+        <style>
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+        <h1>Enter your info!</h1>
+        <Form name="myForm" class="myForm" action="/action.js" onSubmit="return checkForm()" method="post">
+            First Name: <input type="text" id="fName" name="fname">
+            Last Name: <input type="text" id="lName" name="lname">
+           
+            <h2> Address</h2>
+            Address Line 1: <input type="text" id="addressInput" name="addy1" onClick="checkField()" onInput="checkField()"">
+            <br>
+            Address Line 2: <input type="text" name="addy2" onClick="checkField()">
+            <br>
+            City: <input type="text" id="cityName" name="city">
+            <br>
+            State: <input type="text" id="stateName" name="state">
+            <br>
+            Zip Code: <input type="number" id="zip" name="zip">
+            <h2> Personal Info</h2>
+            What is your favorite coffee place in Pittsburgh?
+            <input type="text" id="coffePlace" name="lunchSpot" style="width: 300px;">
+            <br>
+            What is your favorite lunch spot in Pittsburgh?
+            <input type="text" id="lunchSpot" name="lunchSpot" style="width: 300px;">
+            <br>
+            What is your favorite city to visit outside of Pittsburgh?
+            <input type="text" id="vacationName" name="lunchSpot" style="width: 300px;">
+            <br>
+            <button type="submit" onClick="checkForm()"> Submit!</button>
+    
+
+        </Form>
+        </div>
+    </body>
+</html>
