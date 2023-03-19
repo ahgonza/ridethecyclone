@@ -1,0 +1,50 @@
+<html>
+    <title>Sample1</title>
+    <head>
+        <script src="form.js"></script>
+        <style>
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            
+            }
+            .text {
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+        <h1 class="text">Enter your info!</h1>
+        <form name="myForm" class="myForm" onSubmit="return checkForm()" method="post"> 
+            First Name: <input class="text" type="text" id="fName" name="fname">
+            Last Name: <input class="text" type="text" id="lName" name="lname">
+           
+            <h2 class="text">Address</h2>
+            Address Line 1: <input class="text" type="text" id="addressInput" name="addy1" onClick="checkField()" onInput="checkField()">
+            <br>
+            Address Line 2: <input class="text" type="text" name="addy2" onClick="checkField()">
+            <br>
+            City: <input class="text" type="text" id="cityName" name="city">
+            <br>
+            State: <input class="text" type="text" id="stateName" name="state">
+            <br>
+            Zip Code: <input class="text" type="number" id="zip" name="zip">
+            
+            <h2 class="text">Personal Info</h2>
+            What is your favorite coffee place in Pittsburgh?
+            <input class="text" type="text" id="coffeePlace" name="coffeePlace" style="width: 300px;">
+            <br>
+            What is your favorite lunch spot in Pittsburgh?
+            <input class="text" type="text" id="lunchSpot" name="lunchSpot" style="width: 300px;">
+            <br>
+            What is your favorite city to visit outside of Pittsburgh?
+            <input class="text" type="text" id="vacationName" name="vacationName" style="width: 300px">
+            <br>
+            <button class="text" type="submit" onClick="checkForm()"> Submit!</button>
+
+        </Form>
+        </div>
+    </body>
+</html>

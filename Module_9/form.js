@@ -7,6 +7,10 @@ function checkField() {
        } 
 }
 
+function stateField() {
+  
+}
+
 function checkForm() {
     var allFields =[ 
         document.getElementById("fName"),
@@ -20,15 +24,11 @@ function checkForm() {
         document.getElementById("vacationName")
     ];
     for (var i = 0; i < allFields.length; i++) {
-        if (allFields[i].length === 0) {
+        if (allFields[i].value.length === 0) {
+          alert("Please fill out all fields");
           return false;
         }
-      }
-      return true;
     }
 
-    function validateForm() {
-        if (checkForm() === false) {
-            alert("Please fill in all fields!")
-        } 
-      } 
+      return true;
+    }
