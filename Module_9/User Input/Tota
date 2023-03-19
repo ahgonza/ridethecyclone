@@ -1,0 +1,48 @@
+<html>
+    <title> Username and Password</title>
+    <head>
+        <script>
+            function checkForm(event) {
+                const usernameInput = document.getElementById("username");
+                const passwordInput = document.getElementById("password");
+                let isUsernameValid = true;
+                let isPasswordValid = true;
+        
+                if (usernameInput.value.length < 8) {
+                    usernameInput.setCustomValidity("Username must be at least 8 characters long."); 
+                    isUsernameValid = false;
+                } else {
+                    usernameInput.setCustomValidity("");
+                }
+        
+                if (passwordInput.value.length < 12) {
+                    passwordInput.setCustomValidity("Password must be at least 12 characters long");
+                    isPasswordValid = false;
+                } else {
+                    passwordInput.setCustomValidity("");
+                }
+        
+                return isUsernameValid && isPasswordValid;
+            }
+        </script>        
+        <style>
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .text {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="myForm" class="myForm" onSubmit="return checkForm(event);" action="https://corgiorgy.com/" >
+            Username: <input class="text" type="text" id="username">
+            Password <input class="text" type="password" id="password">
+            <button class="text" type="submit"> Submit!</button>
+        </form>
+    </body>
+</html>
+
+
