@@ -1,0 +1,41 @@
+.fullScreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submitButton {
+    background-color: #A52A2A;
+    color: white;
+}
+.banner {
+    background-color: #135a10;
+    display: flex;
+    justify-content: center;
+    width: 105%
+}
+.logo {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20;
+    text-align: center;
+}
+.grocery-items {
+    display: flex;
+    flex-direction: column;
+}
+.grocery-item {
+    border: 1px solid black;
+    padding: 8px;
+    margin-bottom: 6px;
+    width: 25%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.button {
+    justify-content: center;
+}
+/* Cart item styles */
+.cart-items {
+    display: none;
+/*daddy*/
+}
+

@@ -21,27 +21,27 @@
     </head>
     <body>
         <div class="fullScreen">
-        <form class="myForm" id="accountForm" onSubmit="saveForm()" method="post" action="logIn.html"> 
+        <form class="myForm" id="accountForm" onSubmit="saveForm(e);" method="post" action=""> 
             <h1> Create an Account</h1>
-            First Name: <input class="text" type="text" id="fName" name="fname" required>
-            Last Name: <input class="text" type="text" id="lName" name="lname" required>
+            First Name: <input class="text" type="text" id="fName" name="fname">
+            Last Name: <input class="text" type="text" id="lName" name="lname">
            
             <h2 class="text">Address</h2>
-            Address Line 1: <input class="text" type="text" id="addressInput" name="addy1" onInput="checkFieldColor('addressInput');" required>
+            Address Line 1: <input class="text" type="text" id="addressInput" name="addy1" onInput="checkFieldColor('addressInput');">
             <br>
             Address Line 2: <input class="text" type="text" id="addressInput2" name="addy2" onInput="checkFieldColor('addressInput2')">
             <br>
-            City: <input class="text" type="text" id="cityName" name="city" required>
+            City: <input class="text" type="text" id="cityName" name="city">
             <br>
-            State: <input class="text" type="text" id="stateName" name="state" maxlength="2" required>
+            State: <input class="text" type="text" id="stateName" name="state" maxlength="2">
             <br>
-            Zip Code: <input class="text" type="number" id="zip" name="zip" maxlength="5" required>
+            Zip Code: <input class="text" type="number" id="zip" name="zip" maxlength="5">
 
             <h2> User Details</h2>
-            Username: <input type="text" id="username" required>
+            Username: <input type="text" id="username">
             <br>
-            Password <input type="text" id="password" required>
-            <button type="submit" class="submitButton" onClick="window.open('logIn.html')"> Create Account</button>
+            Password <input type="text" id="password">
+            <button type="submit" class="submitButton"> Create Account</button>
         </form>
         </div>
     </body>
