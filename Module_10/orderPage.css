@@ -21,7 +21,8 @@
 }
 .grocery-items {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .grocery-item {
     border: 1px solid black;

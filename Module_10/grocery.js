@@ -1,5 +1,5 @@
-function saveForm() {
-    e.preventDefault(); 
+function saveForm(event) {
+    event.preventDefault(); 
     var allQueries = [
         document.getElementById("fName"),
         document.getElementById("lName"),
@@ -20,7 +20,7 @@ function saveForm() {
     const password = document.getElementById("password").value;
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
-    e.target.submit();
+    event.target.submit();
     window.open("logIn.html");
 }
 
@@ -32,6 +32,7 @@ function logIn() {
         alert("That username and password combination does not exist.");
         return false; 
     } else {
+        window.open("grocery.html");
         return true;
     }
 }

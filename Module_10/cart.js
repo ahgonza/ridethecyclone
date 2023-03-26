@@ -1,15 +1,39 @@
 var groceries = [{
-    name: "mom",
-    price: 1
+    name: "apple",
+    price: 1.50
   }, {
-    name: "dad",
-    price: 2
+    name: "orange",
+    price: 2.50
   }, {
-    name: "sister",
-    price: 3
+    name: "bread",
+    price: 2.50
   }, {
-    name: "brother",
-    price: 4
+    name: "Lamborghini",
+    price: 2000000
+  }, {
+    name: "Mazda",
+    price: 25000
+  }, {
+    name: "cigarettes",
+    price: 5
+  }, {
+    name: "wall",
+    price: 40000
+  }, {
+    name: "police officer",
+    price: 0
+  }, {
+    name: "friend",
+    price: 1000000000
+  }, {
+    name: "basketball",
+    price: 10
+  }, {
+    name: "skateboard",
+    price: 200
+  }, {
+    name: "sea shell",
+    price: 9
   }
 ];
 
@@ -42,10 +66,10 @@ var cartItemsEl = document.querySelector(".cart-items");
 
 function renderCartView() {
   groceryItemsEl.style.display = "none";
+  document.querySelector(".items-heading").style.display = "none";
   cartItemsEl.style.display = "block";
   for (let i = 0; i < cart.length; i++) {
     const cartItemHTML = `
-    <h1> Cart</h1>
     <div onClick="handleClick(event);" class="cart-item" data-cart-item='{"name":"${cart[i].name}", "price":${cart[i].price}}'>
       <div>
         <strong>Name:</strong>${cart[i].name} 
@@ -59,4 +83,9 @@ function renderCartView() {
   }
 } 
 
+/* function boxShadow() {
+  document.querySelector(".grocery-item").style.background-color = "#135a10";
+}
+
+document.querySelector(".grocery-item").addEventListener("click", boxShadow()); */
 
